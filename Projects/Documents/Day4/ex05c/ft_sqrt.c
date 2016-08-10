@@ -14,6 +14,8 @@ int	ft_sqrt(int nb)
 {
 	int i;
 
+	if (nb > 2147395600)
+		return (0);
 	i = 0;
 	while (i * i < nb)
 		i++;
@@ -25,5 +27,5 @@ int	ft_sqrt(int nb)
 
 int main()
 {
-	printf("%d", ft_sqrt(0));
+	printf("%d", ft_sqrt(2147483647));
 }

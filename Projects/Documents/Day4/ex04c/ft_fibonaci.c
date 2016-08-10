@@ -24,10 +24,7 @@ int	ft_fibonacci(int nb)
 
 int main()
 {
-	int i=-1;
-	while (i++ < 10)
-	{
-		printf("%d", ft_fibonacci(i));
-	}
+	int i=25;
+	printf("%d\n", ft_fibonacci(i));
 	return(0);
 }
