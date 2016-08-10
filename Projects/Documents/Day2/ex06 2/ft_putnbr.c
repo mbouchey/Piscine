@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouchey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -28,11 +28,11 @@ void	ft_putnbr(int nbr)
 	if (nbr < 0)
 	{
 		ft_putchar('-');
-		nbr = nbr - 2 * nbr;
+		nbr = -nbr;
 	}
-	if (nbr > 10)
+	if (nbr > 9)
 	{
-		x = nbr - nbr / 10 * 10;
+		x = nbr % 10;
 		nbr = nbr / 10;
 		ft_putnbr(nbr);
 		ft_putchar('0' + x);
@@ -43,5 +43,5 @@ void	ft_putnbr(int nbr)
 
 int		main(void)
 {
-	ft_putnbr(125);
+	ft_putnbr(-10);
 }
