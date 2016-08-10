@@ -12,25 +12,32 @@
 
 int	ft_is_prime(int nb)
 {
-	unsigned int i;
-	int prime;
-	int max;
+	int	i;
+	int	prime;
 
-	prime = 2;
-	max = nb / 2 + 1;
-	i = 1;
-	while (i < nb / i && prime != 0)
+	prime = 1;
+	i = 2;
+	if (nb == 2)
+		return (1);
+	if (nb % 2 == 0 || nb < 2)
+		return (0);
+	while (i < nb && prime == 1)
 	{
 		if (nb % i == 0)
 			prime--;
 		i++;
 	}
-	if (prime == 2)
-		return (0);
-	return(prime);
+	return (prime);
 }
 
 int main()
 {
-	printf("%d\n", ft_is_prime(49999));
+	int i;
+	i=-1;
+	while(i++!=100)
+	{
+	printf("%d", i);
+	printf("%s", " ");
+	printf("%d\n", ft_is_prime(i));
+}
 }
