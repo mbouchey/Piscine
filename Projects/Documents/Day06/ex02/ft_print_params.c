@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouchey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/08 06:37:18 by mbouchey          #+#    #+#             */
-/*   Updated: 2016/08/08 06:37:27 by mbouchey         ###   ########.fr       */
+/*   Created: 2016/08/14 06:41:51 by mbouchey          #+#    #+#             */
+/*   Updated: 2016/08/14 06:41:53 by mbouchey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include <unistd.h>
+
+void	putchar(char c)
 {
-	unsigned int i;
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int i;
+
+	i = -1;
+	while (str[++i] != '\0')
+		putchar(str[i]);
+}
+
+int main(int argc, char *argv[])
+{
+	int i;
 
 	i = 0;
-	while (i < n && src[i])
+	while (++i < argc)
 	{
-		dest[i] = src[i];
-		i++;
+		ft_putstr(argv[i]);
+		putchar('\n');
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }

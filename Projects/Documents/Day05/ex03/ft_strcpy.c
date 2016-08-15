@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouchey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/08 06:37:18 by mbouchey          #+#    #+#             */
-/*   Updated: 2016/08/08 06:37:27 by mbouchey         ###   ########.fr       */
+/*   Created: 2016/08/14 04:25:16 by mbouchey          #+#    #+#             */
+/*   Updated: 2016/08/14 04:25:18 by mbouchey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strcpy(char *dest, char *src)
 {
-	unsigned int i;
-
 	i = 0;
-	while (i < n && src[i])
+	while (src[i])
 	{
 		dest[i] = src[i];
 		i++;

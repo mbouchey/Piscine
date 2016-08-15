@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouchey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/08 06:37:18 by mbouchey          #+#    #+#             */
-/*   Updated: 2016/08/08 06:37:27 by mbouchey         ###   ########.fr       */
+/*   Created: 2016/08/15 21:37:01 by mbouchey          #+#    #+#             */
+/*   Updated: 2016/08/15 21:44:20 by mbouchey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strcat(char *dest, char *src)
 {
-	unsigned int i;
+	int nb;
+	int i;
 
 	i = 0;
-	while (i < n && src[i])
+	nb = 0;
+	while (dest[nb] != '\0')
+		nb++;
+	while (src[i])
 	{
-		dest[i] = src[i];
+		dest[nb] = src[i];
+		nb++;
 		i++;
 	}
-	dest[i] = '\0';
+	dest[nb] = '\0';
 	return (dest);
 }
